@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/kyle_notes?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&serverTimezone=GMT
+    username: root
+    password: ffaarr002
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  rsocket:
+    server:
+      port: 8080
+#mybatis:
+#  mapper-locations: classpath:./mapping/*.xml
+#  type-aliases-package: zihong.wu.cloudnote.mapper
+
+
+
