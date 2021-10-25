@@ -1,5 +1,6 @@
 package zihong.wu.cloudnote.service;
 
+import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import zihong.wu.cloudnote.common.response.ResultData;
 import zihong.wu.cloudnote.common.util.DateUtils;
@@ -10,6 +11,7 @@ import zihong.wu.cloudnote.mapper.UserCardMapper;
 
 import javax.annotation.Resource;
 
+@Service
 public class UserCardService {
     @Resource
     private UserCardMapper mapper;
@@ -53,7 +55,7 @@ public class UserCardService {
             return ResultData.error("用户名片不存在");
         }
         String imgName = userCard.getPortraitName();
-        if(StringUtils.isNotEmpty(imgName)){
+        if(StringUtils.noEmpty(imgName)){
             userCard.setProtraitUrl(FileUtils.getImgUrl(imgName));
             userCard.setProtraitThumUrl(FileUtils.getThumUrl(imgName));
         }

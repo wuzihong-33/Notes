@@ -9,7 +9,7 @@ import zihong.wu.cloudnote.common.util.JwtUtils;
 import zihong.wu.cloudnote.entity.UserInfo;
 
 
-@PropertySource(value = "classpath:application.yml", encoding = "utf-8")
+@PropertySource(value = "classpath:application.properties", encoding = "utf-8")
 @SpringBootTest
 public class JwtTest {
     @Test

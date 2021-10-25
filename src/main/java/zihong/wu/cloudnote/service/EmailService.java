@@ -50,14 +50,9 @@ public class EmailService {
         return false;
     }
 
-
-
     private void setCodeUsed(EmailLog emailLog){
         emailLog.setIsUsed(1);
         mapper.baseUpdateById(emailLog);
     }
-
-
-
 
 }

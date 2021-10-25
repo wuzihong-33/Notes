@@ -272,7 +272,7 @@ public class SqlFieldReader {
         builder.append(") ");
 
         // 如果有表说明，添加表说明
-        if(StringUtils.isNotEmpty(tableComment)){
+        if(StringUtils.notEmail(tableComment)){
             builder.append("comment '")
                     .append(tableComment)
                     .append("'; \n");
@@ -314,7 +314,7 @@ public class SqlFieldReader {
                 }
 
                 //如果有字段说明，添加字段说明
-                if(StringUtils.isNotEmpty(fieldAttribute.value())) {
+                if(StringUtils.noEmpty(fieldAttribute.value())) {
                     builder.append(" comment '")
                             .append(fieldAttribute.value())
                             .append("'");
